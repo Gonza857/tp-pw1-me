@@ -3,16 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- MY CSS -->
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <!-- BOXICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <main class="styledLogin bor1">
-      <div class="styledPlan-wrapper">
-        <div class="bor3">Plan mensual</div>
-        <div class="bor3">Plan anual</div>
-        <div class="bor3">Plan infinito</div>
+    <header class="styledHeader">
+      <div class="pageTitle_container">
+        <h1 class="pageTitle">
+          <a href="./index.html"> Spotilam </a>
+        </h1>
       </div>
+      <div class="userInfo_container">
+        <div class="userInfo text-center">
+          <p class="userName">Gonzalo Ramos</p>
+          <a href="./login.html" class="a-red">Cerrar sesión</a>
+        </div>
+        <div class="userIconBox">
+          <a href="./user-profile.html">
+            <i class="bx bx-user"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="styledPlanes">
+      <h1>Planes Premium</h1>
+      <div class="styledPlan-wrapper">
+        <div class="plan-box">
+          <h3>Plan mensual</h3>
+          <div class="imagen-planes">
+            <img src="./img/fake_image.jpg" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sunt
+            doloribus minima commodi repellendus non.
+          </p>
+          <p class="sp-2 color-font p-bold">$4.99</p>
+          <button class="button-2">
+            <a href="./pagar.html">Comprar</a>
+          </button>
+        </div>
+        <div class="plan-box">
+          <h3>Plan anual</h3>
+          <div class="imagen-planes">
+            <img src="./img/fake_image.jpg" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sunt
+            doloribus minima commodi repellendus non.
+          </p>
+          <p class="sp-2 color-font p-bold">$29.99</p>
+          <button class="button-2">
+            <a href="./pagar.html">Comprar</a>
+          </button>
+        </div>
+        <div class="plan-box">
+          <h3>Plan Infinito</h3>
+          <div class="imagen-planes">
+            <img src="./img/fake_image.jpg" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sunt
+            doloribus minima commodi repellendus non.
+          </p>
+          <p class="sp-2 color-font p-bold">$49.99</p>
+          <button class="button-2">
+            <a href="./pagar.html">Comprar</a>
+          </button>
+        </div>
+      </div>
+      <button class="button-1">
+        <a href="./index.html">Volver al home</a>
+      </button>
     </main>
   </body>
 </html>

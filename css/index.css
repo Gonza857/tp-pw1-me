@@ -68,6 +68,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     background-color: #23272f;
     color: #fff;
@@ -111,10 +112,16 @@ body {
     align-items: center;
 }
 
-.pageTitle {
+.pageTitle a {
     font-family: monospace;
+    cursor: pointer;
+    color: aqua;
+    transition: all .5s;
 }
 
+.pageTitle a:hover {
+    text-shadow: 0px 0px 15px rgba(0,255,255,1);
+}
 
 /* MAIN STYLES */
 .styledMain {
@@ -122,14 +129,13 @@ body {
     min-height: 100vh;
     margin-left: 250px;
     background-color: #23272f;
-    border: 10px solid green !important;
 }
 
 .musicWrapper {
     width: 80%; 
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 50px 0;
 }
@@ -157,6 +163,17 @@ body {
     margin: 5px;
     background-color: #333;
     color: #ffF;
+}
+
+@media screen and (min-width: 768px) {
+    .musicWrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .musicWrapper {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 /* STYLED FOOTER */
@@ -187,18 +204,170 @@ body {
     color: #fff;
 }
 
+/* - - - - - BUSCAR - - - - - */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.search-box .button1 {
+    height: 100%;
+}
+
+/* - - - - - PAGO - - - - - */
+.main-pagar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.styledPlanElegido {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+} 
+
+.pagar-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.pago-form {
+    width: 500px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
 /* - - - - - PLANES - - - - - */
 
+.styledPlanes {
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    background-color: #23272f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.styledPlanes h1 {
+    padding-top: 20px;
+
+}
+
 .styledPlan-wrapper {
-    border: 3px solid #117fa4;
     display: flex;
 }
 
-.styledPlan-wrapper div {
-    width: 300px;
-    height: calc(100vh - 200px);
+.imagen-planes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
+.imagen-planes img { 
+    width: 80%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.styledPlan-wrapper .plan-box {
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all .3s;
+    overflow: hidden;
+    border: 1px solid #117fa4;
+    background-color: #23272f;
+}
+
+.plan-box:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.styledPlan-wrapper div h3 {
+    color: aqua;
+    font-size: 1.6rem;
+    transition: all .3s;
+}
+
+.styledPlan-wrapper div h3:hover {
+    text-shadow: 0px 0px 9px rgba(0,255,255,0.65);
+}
+
+.styledPlan-wrapper div p {
+  text-align: center;
+}
+
+/*  - - - - - FAVS - - - - - */
+
+.fav-title {
+    margin-top: 20px;
+}
+
+.fav-wrapper {
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fav-header {
+	display: flex;
+    background-color: #117fa4;
+}
+
+.fav-header .fav-row p {
+	display: flex;
+    font-weight: bold;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fav-body .fav-row p {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+}
+
+.fav-body .fav-row p i {
+    font-size: 3rem;
+    color: aqua;
+}
+
+.fav-row {
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: auto;
+    transition: all .2s;
+}
+
+.fav-row:hover {
+    background-color: #353b46;
+}
 
 /* - - - - - LOGIN - - - - - */
 .styledLogin {
@@ -298,12 +467,50 @@ body {
     cursor: pointer;
 }
 
+.a-red {
+    color: #d3142e;
+    transition: all .3s;
+}
+
+.a-red:hover {
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
 .a-stlyed:hover {
     color: aqua;
     transform: scale(1.01);
 }
 
+.sp-1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
 
+.sp-2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.p-bold {
+    font-weight: bold;
+}
+
+.color-font {
+    color: aqua;
+}
+
+.mainDefault {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #23272f;
+    color: #fff;
+    position: relative;
+    border-bottom: 2px solid aqua;
+}
+
+/* COMPONENTS */
 .button-1 {
   background-color: #159CC8;
   color: #FFFFFF;
@@ -311,7 +518,9 @@ body {
   border-style: none;
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;

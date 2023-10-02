@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- MY CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <!-- BOXICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="styledHeader">
+      <div class="pageTitle_container">
+        <h1 class="pageTitle">
+          <a href="./index.html"> Spotilam </a>
+        </h1>
+      </div>
+      <div class="userInfo_container">
+        <div class="userInfo text-center">
+          <p class="userName">Gonzalo Ramos</p>
+          <a href="./login.html" class="a-red">Cerrar sesión</a>
+        </div>
+        <div class="userIconBox">
+          <a href="./user-profile.html">
+            <i class="bx bx-user"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="mainDefault main-pagar">
+      <!-- ROW -->
+      <div class="pagar-wrapper">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="styledPlanElegido">
+          <h3>Elegiste el plan:</h3>
+          <div class="styledPlan-wrapper">
+            <div class="plan-box">
+              <h3>Plan mensual</h3>
+              <div class="imagen-planes">
+                <img src="./img/fake_image.jpg" />
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sunt
+                doloribus minima commodi repellendus non.
+              </p>
+              <p class="sp-2 color-font p-bold">$4.99</p>
+              <button class="button-2">
+                <a href="./pagar.html">Comprar</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- COLUMNA DERECHA -->
+        <div>
+          <form class="pago-form">
+            <!-- TARJETA -->
+            <div>
+              <label>Números de tarjeta</label>
+              <input
+                class="styled-input"
+                type="text"
+                placeholder="1234 5678 9012 3456"
+              />
+            </div>
+            <!-- VENCIMIENTO -->
+            <div>
+              <label>Números de tarjeta</label>
+              <input class="styled-input" type="date" />
+            </div>
+            <!-- CODIGO DE SEGURIDAD -->
+            <div>
+              <label>Números de tarjeta</label>
+              <input class="styled-input" type="number" placeholder="123" />
+            </div>
+            <!-- NOMBRE Y APELLIDO -->
+            <div>
+              <label>Números de tarjeta</label>
+              <input
+                class="styled-input"
+                type="text"
+                placeholder="Gonzalo Ramos"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- BOTONES -->
+      <div class="text-center d-flex gap-2 jcc">
+        <button type="submit" class="button-1">
+          <a href="./index.html">Cancelar</a>
+        </button>
+        <button type="submit" class="button-2">
+          <a href="./index.html">Pagar</a>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
